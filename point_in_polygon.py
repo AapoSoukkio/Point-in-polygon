@@ -19,7 +19,7 @@ def onclick(event):
     else:
         print("outside")
         plt.plot(xp, yp, "ro", markersize=5)
-    plt.gcf().canvas.draw()
+    plt.draw()
 
 
 polygon = random_polygon(num_points=20)
