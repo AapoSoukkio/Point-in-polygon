@@ -2,9 +2,9 @@ from polygenerator import random_polygon
 import matplotlib.pyplot as plt
 
 
-def is_inside(edges, xp, yp):
+def is_inside(edge_pairs, xp, yp):
     cnt = 0
-    for edge in edges:
+    for edge in edge_pairs:
         (x1, y1), (x2, y2) = edge
         if (yp < y1) != (yp < y2) and xp < x1 + ((yp-y1)/(y2-y1))*(x2-x1):
             cnt += 1
@@ -13,9 +13,14 @@ def is_inside(edges, xp, yp):
 
 def onclick(event):
     xp, yp = event.xdata, event.ydata
-    plt.plot(xp, yp, "go", markersize=5)
+    if is_inside(edge_pairs, xp, yp):
+        print("inside")
+        plt.plot(xp, yp, "go", markersize=5)
+    else:
+        print("outside")
+        plt.plot(xp, yp, "go", markersize=5)
     plt.gcf().canvas.draw()
-
+    
 
 polygon = random_polygon(num_points=20)
 polygon.append(polygon[0])
