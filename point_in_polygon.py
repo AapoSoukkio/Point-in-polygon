@@ -1,6 +1,16 @@
 from polygenerator import random_polygon
 import matplotlib.pyplot as plt
 
+
+def is_inside(edges, xp, yp):
+    cnt = 0
+    for edge in edges:
+        (x1, y1), (x2, y2) = edge
+        if (yp < y1) != (yp < y2) and xp < x1 + ((yp-y1)/(y2-y1))*(x2-x1):
+            cnt += 1
+    return cnt%2 == 1
+
+
 def onclick(event):
     xp, yp = event.xdata, event.ydata
     plt.plot(xp, yp, "go", markersize=5)
