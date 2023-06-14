@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 
 polygon = random_polygon(num_points=20)
 polygon.append(polygon[0])
-xs, ys = zip(*polygon)
-plt.plot(xs, ys, "b-", linewidth=0.8)
+x_coordinates, y_coordinates = zip(*polygon)
+plt.plot(x_coordinates, y_coordinates, color="black", linestyle="-", linewidth=0.8)
 plt.show()
 
+edge_pairs = list(zip(polygon, polygon[1:] + polygon[:1]))
