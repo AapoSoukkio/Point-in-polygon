@@ -18,9 +18,9 @@ def onclick(event):
         plt.plot(xp, yp, "go", markersize=5)
     else:
         print("outside")
-        plt.plot(xp, yp, "go", markersize=5)
+        plt.plot(xp, yp, "ro", markersize=5)
     plt.gcf().canvas.draw()
-    
+
 
 polygon = random_polygon(num_points=20)
 polygon.append(polygon[0])
