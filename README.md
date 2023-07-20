@@ -31,7 +31,7 @@ In addition to the core functionality the project employs the polygenerator modu
   
 Live demo is available here --> https://replit.com/@AapoSoukkio/Point-in-polygon
 
-(It takes few seconds to download after you press 'Run' so be patient)
+(It can take up to 10 seconds to download after you press 'Run' so be patient)
   
   
 
