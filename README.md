@@ -22,8 +22,17 @@ The primary focus of this project is to provide a solution to the common problem
 
   
 
-In addition to the core functionality the project employs the polygenerator module to generate random polygons and utilizes the matplotlib.pyplot module to visualize the polygons and interactively classify points.
+In addition to the core functionality the project employs the polygenerator module to generate random polygons and utilizes the matplotlib.pyplot module to visualize the polygons and interactively classify points. You can refresh to clear the output and generate a new polygon.
 
+
+
+## Live demo
+
+  
+Live demo is available here --> https://replit.com/@AapoSoukkio/Point-in-polygon
+
+(It takes few seconds to download after you press 'Run' so be patient)
+  
   
 
 ## How to run
@@ -54,4 +63,4 @@ This command will install the `polygenerator` and `matplotlib` packages.
 
 #### Output
 
-A plot window will appear showing the random generated polygon. When you click inside the plot window, the program will check if the clicked point is inside or outside the polygon and print the corresponding message ("inside" or "outside") to the console. Green dot will be plotted if the point is inside the polygon, and a red dot if it's outside.
+A plot window will appear showing the random generated polygon. When you click inside the plot window, the program will check if the clicked point is inside or outside the polygon and print the corresponding message ("inside" or "outside") to the output section and also into the console. Green dot will be plotted if the point is inside the polygon, and a red dot if it's outside. You can refresh anytime to clear the output and generate a new polygon.
